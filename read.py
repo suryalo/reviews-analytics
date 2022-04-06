@@ -23,5 +23,14 @@ print('留言的平均長度為', sum_len/len(data))
 new = []   #建立新清單
 for d in data:
 	if len(d) < 100:
-		new.append(d)  #如果長度小於 100 就把你裝入 new 這個新清單
+		new.append(d)  #如果 (if) 長度小於 100 就把你裝入 new 這個新清單
 print('一共有', len(new), '筆留言長度小於100個字元')
+
+
+# 篩選留言中有提到 “good" 的留言
+good =[]
+for d in data:
+	if 'good' in d:
+		good.append(d)  #如果 (if) “good" 這個字有在留言（d) 裡，就把你裝入good這個清單
+print('一共有', len(good), '筆留言提到 good')
+
